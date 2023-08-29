@@ -33,9 +33,14 @@ public class HandManager : MonoBehaviour
         for(int i = 0; i < cards.Count; i++)
         {
             cardPositions.Add(leftBound.position + (distanceBetween * i));
-            cards[i].transform.position = cardPositions[i];
-            cards[i].transform.rotation = leftBound.rotation;
+            //cards[i].transform.position = cardPositions[i];
+            //cards[i].transform.rotation = leftBound.rotation;
+
+            cards[i].MoveTo(cardPositions[i], leftBound.rotation);
+            cards[i].inHand = true;
+            cards[i].handPosition = i;
         }
     }
+    
 
 }
