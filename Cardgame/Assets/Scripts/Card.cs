@@ -74,7 +74,7 @@ public class Card : MonoBehaviour
             Debug.Log("Touching...");
             // Gradually scale up the card to the target scale over 0.5 seconds
             StartCoroutine(ScaleCardOverTime(new Vector3(2.5f, 2.5f, 2.5f), 0.1f));
-            transform.position = currentPlace + new Vector3(0f, 0.01f, -0.01f);
+            transform.position = currentPlace + new Vector3(0f, 0.01f, -0.05f);
         }
     }
 
